@@ -1,0 +1,299 @@
+# planningsetwd("C:/Users/GuanYu/Desktop/���a��/�u���|�M��")
+getwd()
+a<-read.csv("C:/Users/GuanYu/Desktop/���a��/�u���|�M��/tripadvisor_dataset.csv")
+
+for(i in 1:7)
+{
+  a=a[,-3]
+}
+
+list=data.frame()
+b=0
+for(i in 1:11937)
+{
+  if(a[i,1]==c('NULL')||a[i,2]==c('NULL')||a[i,3]==c('NULL')||a[i,4]==c('NULL')||a[i,5]==c('NULL')||a[i,6]==c('NULL')||a[i,7]==c('NULL'))
+  {}
+  else
+  {
+    b=b+1
+    list[b,1]=a[i,1]
+    list[b,2]=a[i,2]
+    list[b,3]=a[i,3]
+    list[b,4]=a[i,4]
+    list[b,5]=a[i,5]
+    list[b,6]=a[i,6]
+    list[b,7]=a[i,7]
+    list[b,8]=a[i,8]
+    list[b,9]=a[i,9]
+  }
+}
+names(list)[1:9]=c("overall","value","rooms","location","cleanliness","service","sleep","hotel_name","city")
+
+
+#city
+NY=data.frame()
+HK=data.frame()
+London=data.frame()
+LA=data.frame()
+paris=data.frame()
+chicago=data.frame()
+seoul=data.frame()
+sg=data.frame()
+sd=data.frame()
+jp=data.frame()
+b=0
+c=0
+d=0
+e=0
+f=0
+g=0
+h=0
+j=0
+k=0
+l=0
+  for(i in 1:9259)
+  {
+    if(list[i,9]==c('New York'))
+    {
+      b=b+1
+      NY[b,1]=list[i,1]
+      NY[b,2]=list[i,2]
+      NY[b,3]=list[i,3]
+      NY[b,4]=list[i,4]
+      NY[b,5]=list[i,5]
+      NY[b,6]=list[i,6]
+      NY[b,7]=list[i,7]
+      NY[b,8]=list[i,8]
+      NY[b,9]=list[i,9]
+    }
+    else if(list[i,9]==c('Chicago'))
+    {
+      c=c+1
+      chicago[c,1]=list[i,1]
+      chicago[c,2]=list[i,2]
+      chicago[c,3]=list[i,3]
+      chicago[c,4]=list[i,4]
+      chicago[c,5]=list[i,5]
+      chicago[c,6]=list[i,6]
+      chicago[c,7]=list[i,7]
+      chicago[c,8]=list[i,8]
+      chicago[c,9]=list[i,9]
+    }
+    else if(list[i,9]==c('London'))
+    {
+      d=d+1
+      London[d,1]=list[i,1]
+      London[d,2]=list[i,2]
+      London[d,3]=list[i,3]
+      London[d,4]=list[i,4]
+      London[d,5]=list[i,5]
+      London[d,6]=list[i,6]
+      London[d,7]=list[i,7]
+      London[d,8]=list[i,8]
+      London[d,9]=list[i,9]
+    }
+    else if(list[i,9]==c('Hong Kong'))
+    {
+      e=e+1
+      HK[e,1]=list[i,1]
+      HK[e,2]=list[i,2]
+      HK[e,3]=list[i,3]
+      HK[e,4]=list[i,4]
+      HK[e,5]=list[i,5]
+      HK[e,6]=list[i,6]
+      HK[e,7]=list[i,7]
+      HK[e,8]=list[i,8]
+      HK[e,9]=list[i,9]
+    }
+    else if(list[i,9]==c('Los Angeles'))
+    {
+      f=f+1
+      LA[f,1]=list[i,1]
+      LA[f,2]=list[i,2]
+      LA[f,3]=list[i,3]
+      LA[f,4]=list[i,4]
+      LA[f,5]=list[i,5]
+      LA[f,6]=list[i,6]
+      LA[f,7]=list[i,7]
+      LA[f,8]=list[i,8]
+      LA[f,9]=list[i,9]
+    }
+    else if(list[i,9]==c('Paris'))
+    {
+      g=g+1
+      paris[g,1]=list[i,1]
+      paris[g,2]=list[i,2]
+      paris[g,3]=list[i,3]
+      paris[g,4]=list[i,4]
+      paris[g,5]=list[i,5]
+      paris[g,6]=list[i,6]
+      paris[g,7]=list[i,7]
+      paris[g,8]=list[i,8]
+      paris[g,9]=list[i,9]
+    }
+    else if(list[i,9]==c('Seoul'))
+    {
+      h=h+1
+      seoul[h,1]=list[i,1]
+      seoul[h,2]=list[i,2]
+      seoul[h,3]=list[i,3]
+      seoul[h,4]=list[i,4]
+      seoul[h,5]=list[i,5]
+      seoul[h,6]=list[i,6]
+      seoul[h,7]=list[i,7]
+      seoul[h,8]=list[i,8]
+      seoul[h,9]=list[i,9]
+    }
+    else if(list[i,9]==c('Singapore'))
+    {
+      l=l+1
+      sg[l,1]=list[i,1]
+      sg[l,2]=list[i,2]
+      sg[l,3]=list[i,3]
+      sg[l,4]=list[i,4]
+      sg[l,5]=list[i,5]
+      sg[l,6]=list[i,6]
+      sg[l,7]=list[i,7]
+      sg[l,8]=list[i,8]
+      sg[l,9]=list[i,9]
+    }
+    else if(list[i,9]==c('Sydney'))
+    {
+      j=j+1
+      sd[j,1]=list[i,1]
+      sd[j,2]=list[i,2]
+      sd[j,3]=list[i,3]
+      sd[j,4]=list[i,4]
+      sd[j,5]=list[i,5]
+      sd[j,6]=list[i,6]
+      sd[j,7]=list[i,7]
+      sd[j,8]=list[i,8]
+      sd[j,9]=list[i,9]
+    }
+    else if(list[i,9]==c('Tokyo%2C Japan'))
+    {
+      k=k+1
+      jp[k,1]=list[i,1]
+      jp[k,2]=list[i,2]
+      jp[k,3]=list[i,3]
+      jp[k,4]=list[i,4]
+      jp[k,5]=list[i,5]
+      jp[k,6]=list[i,6]
+      jp[k,7]=list[i,7]
+      jp[k,8]=list[i,8]
+      jp[k,9]=list[i,9]
+    }
+  }
+
+
+#���P����
+test=HK[1:17,]
+for(i in 1:9)
+{
+  if(i==1)
+  {
+    transfer=jp[1:44,]
+    test=rbind(test,transfer)
+  }
+  else if(i==2)
+  {
+    transfer=LA[1:224,]
+    test=rbind(test,transfer)
+  }
+  else if(i==3)
+  {
+    transfer=London[1:567,]
+    test=rbind(test,transfer)
+  }
+  else if(i==4)
+  {
+    transfer=NY[1:438,]
+    test=rbind(test,transfer)
+  }
+  else if(i==5)
+  {
+    transfer=paris[1:275,]
+    test=rbind(test,transfer)
+  }
+  else if(i==6)
+  {
+    transfer=sd[1:55,]
+    test=rbind(test,transfer)
+  }
+  else if(i==7)
+  {
+    transfer=seoul[1:12,]
+    test=rbind(test,transfer)
+  }
+  else if(i==8)
+  {
+    transfer=sg[1:33,]
+    test=rbind(test,transfer)
+  }
+  else if(i==9)
+  {
+    transfer=chicago[1:182,]
+    test=rbind(test,transfer)
+  }
+}
+names(test)[1:9]=c("overall","value","rooms","location","cleanliness","service","sleep","hotel_name","city")
+
+train=HK[18:85,]
+for(i in 1:9)
+{
+  if(i==1)
+  {
+    transfer=jp[45:222,]
+    train=rbind(train,transfer)
+  }
+  else if(i==2)
+  {
+    transfer=LA[225:1123,]
+    train=rbind(train,transfer)
+  }
+  else if(i==3)
+  {
+    transfer=London[568:2838,]
+    train=rbind(train,transfer)
+  }
+  else if(i==4)
+  {
+    transfer=NY[439:2194,]
+    train=rbind(train,transfer)
+  }
+  else if(i==5)
+  {
+    transfer=paris[276:1375,]
+    train=rbind(train,transfer)
+  }
+  else if(i==6)
+  {
+    transfer=sd[56:276,]
+    train=rbind(train,transfer)
+  }
+  else if(i==7)
+  {
+    transfer=seoul[13:62,]
+    train=rbind(train,transfer)
+  }
+  else if(i==8)
+  {
+    transfer=sg[34:168,]
+    train=rbind(train,transfer)
+  }
+  else if(i==9)
+  {
+    transfer=chicago[184:916,]
+    train=rbind(train,transfer)
+  }
+}
+names(train)[1:9]=c("overall","value","rooms","location","cleanliness","service","sleep","hotel_name","city")
+(train$city)
+library(MASS)
+library(rpart)
+set.seed(1111)
+cart=rpart(train$city~.,train,type='class')
+plot(cart)
+pre=predict(cart,test)
+confusion_matrix=table(Type=test$city,Predict=pre)
+accuracy=sum(diag(confusion_matrix)/sum(confusion_matrix))
